@@ -1,0 +1,45 @@
+# SpecKit Plus Configuration
+version: "1.0.0"
+project:
+  name: "Interactive Robotics Book"
+  description: "Physical AI & Humanoid Robotics Interactive Textbook Platform"
+  version: "1.0.0"
+
+spec_format:
+  template: "templates/spec-template.md"
+  sections:
+    - overview
+    - requirements
+    - user_stories
+    - success_criteria
+    - constraints
+    - dependencies
+
+plan_format:
+  template: "templates/plan-template.md"
+  sections:
+    - architecture
+    - implementation_strategy
+    - milestones
+    - risks
+    - dependencies
+
+tasks_format:
+  template: "templates/tasks-template.md"
+  structure: "milestone-based"  # Not flat 141 tasks
+  max_milestones: 15
+  max_tasks_per_milestone: 10
+
+enforcement:
+  pre_commit_hooks:
+    - "scripts/bash/check-forbidden-files.sh"
+    - "scripts/bash/check-pr-size.sh"
+
+  github_actions:
+    - "scripts/python/validate_sources.py"
+    - "scripts/python/check_practical_balance.py"
+
+constitution:
+  path: "../CONSTITUTION.md"
+  version: "2.0.0"
+  enforcement: "automated"
