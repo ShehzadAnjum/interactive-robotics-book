@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+build/
+dist/
+.next/
+.docusaurus/
+.cache/
+out/
+.turbo/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Testing
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+playwright/.cache/
+
+# Misc
+*.pyc
+__pycache__/
+.pytest_cache/
+*.sqlite
+*.sqlite3
+
+# Vercel
+.vercel
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Package manager locks (keep only one)
+# Uncomment the one you DON'T use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
